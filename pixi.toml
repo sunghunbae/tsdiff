@@ -1,0 +1,28 @@
+[workspace]
+authors = ["Sung-Hun Bae <sunghun.bae@gmail.com>"]
+channels = ["conda-forge", "pytorch", "pyg", "nvidia"]
+name = "tsdiff"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "==3.10"
+numpy = "==1.26"
+cuda-version = "12.*"
+pytorch = {version="*", channel= "pytorch"}
+torchvision = {version="*", channel= "pytorch"}
+torchaudio = {version="*", channel= "pytorch"}
+pytorch-cuda = {version="==12.4", channel = "pytorch"}
+torch-geometric = "*"
+pytorch-sparse = "*"
+pytorch-cluster = "*"
+pytorch-scatter = "*"
+ase = ">=3.28.0,<4"
+easydict = ">=1.13,<2"
+wandb = ">=0.26.0,<0.27"
+rdkit = ">=2025.9.5,<2026"
+
+[pypi-dependencies]
+slapmapper = { git = "https://github.com/shin1koda/slap-mapper" }
