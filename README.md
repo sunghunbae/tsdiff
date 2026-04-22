@@ -5,17 +5,23 @@
 The official implementation of TSDiff: Diffusion-based Generative AI for Exploring Transition States from 2D Molecular Graphs [[arxiv]](https://arxiv.org/abs/2304.12233).
 ![cover](assets/Figure1.png)
 
+
+## Scope of Use
+
+The model is trained with datasets with H,C,N,O atoms.
+Molecules containing atoms other than H,C,N,O will cause a runtime error
+
 ## Environments
 
-### Install via Conda (Recommended)
+### Install & Getting Started with Pixi
+
+Please install pixi if necessary: https://pixi.prefix.dev/latest/installation/
 
 ```bash
-# Clone the environment
-conda env create -f env.yml
-# Activate the environment
-conda activate cu102_tsdiff
-# Install PyG
-conda install pytorch-geometric=1.7.2=py37_torch_1.8.0_cu102 -c rusty1s -c conda-forge
+$ git clone https://github.com/sunghunbae/tsdiff.git
+$ cd tsdiff
+$ pixi install
+$ pixi shell
 ```
 
 ## Dataset
